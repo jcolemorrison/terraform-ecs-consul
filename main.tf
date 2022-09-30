@@ -1,11 +1,4 @@
 terraform {
-  cloud {
-    organization = "jcolemorrison"
-    workspaces {
-      tags = ["tf-ecs-consul"]
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"

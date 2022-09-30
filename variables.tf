@@ -73,13 +73,3 @@ variable "consul_server_allowed_cidr_blocks_ipv6" {
   description = "List of valid IPv6 CIDR blocks that can access the consul servers from the public internet."
   default     = ["::/0"]
 }
-
-variable "tfc_organization" {
-  description = "Name of the Terraform Cloud Organization. Set in TFC Workspace Variables or via Variables File."
-  type = string
-}
-
-variable "tfc_workspace_tag" {
-  description = "Name of the Terraform Cloud Workspace Tag.  All created workspaces share this tag. Set in TFC Workspace Variables or via Variables File"
-  type = string
-}
