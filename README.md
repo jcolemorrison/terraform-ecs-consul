@@ -2,10 +2,10 @@
 
 This repository demonstrates setting up an Amazon ECS microservices architecture with HashiCorp Terraform and Consul.  It also goes along with two other repositories:
 
-1. [CDK for Terraform with Amazon ECS and Consul]()
-  - deploys an additional ECS microservice via the [CDK for Terraform]()
-2. [Sentinel Policies for Terraform with Amazon ECS and Consul]()
-  - creates [Sentinel Policies]() to guard both projects in [Terraform Cloud]()
+1. [CDK for Terraform with Amazon ECS and Consul](https://github.com/jcolemorrison/cdktf-ecs-consul)
+  - deploys an additional ECS microservice via the [CDK for Terraform](https://www.terraform.io/cdktf)
+2. [Sentinel Policies for Terraform with Amazon ECS and Consul](https://github.com/jcolemorrison/sentinel-ecs-consul)
+  - creates [Sentinel Policies](https://www.hashicorp.com/sentinel) to guard both projects in [Terraform Cloud](https://cloud.hashicorp.com/products/terraform)
 
 ## The Architecture
 
@@ -77,7 +77,7 @@ All services use [Fake Service](https://github.com/nicholasjackson/fake-service)
 
 We can also insert an addition step between the `terraform plan` and `terraform apply` phases that checks our code, plan, statefile, and run data using [HashiCorp Sentinel](https://www.hashicorp.com/sentinel).
 
-1. Fork the [Sentinel Policy Repo]()
+1. Fork the [Sentinel Policy Repo](https://github.com/jcolemorrison/sentinel-ecs-consul)
 
 2. Head to **Settings** in your Terraform Cloud console
 
