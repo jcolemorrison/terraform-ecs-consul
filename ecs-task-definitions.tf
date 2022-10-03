@@ -47,7 +47,7 @@ module "client" {
         },
         {
           name = "UPSTREAM_URIS" # Fake service upstream service to call to
-          value = "http://localhost:1234,http://localhost:1235" # point all upstreams to the proxy
+          value = "http://localhost:1234,http://localhost:1235,http://localhost:1236" # point all upstreams to the proxy
         }
       ]
     }
@@ -95,6 +95,11 @@ module "client" {
       # I guess this is just what the service points to that the envoy listener goes through
       destinationName = "${local.project_tag}-messages"
       localBindPort  = 1235
+    },
+    {
+      # this is good grounds for a sentinel rule, so that we always know what it is
+      destinationName = "${local.project_tag}-images"
+      localBindPort  = 1236
     }
   ]
   # join on the private IPs, much like the consul config "retry_join" argument
